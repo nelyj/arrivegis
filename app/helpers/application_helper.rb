@@ -19,6 +19,13 @@ module ApplicationHelper
   end
 
   def controller_action(controller)
+    action = controller.controller_name+"#"+controller.action_name
 
+    case action
+    when "cargas#index"
+      "Dashboard"
+    else
+      ""
+    end
   end
 end

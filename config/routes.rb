@@ -11,5 +11,6 @@ Arrivegis::Application.routes.draw do
     get 'logout', to: 'devise/sessions#destroy', as: :logout
   end
 
+  match '/dashboard', to: 'cargas#index', as: :dashboard
 
 end
