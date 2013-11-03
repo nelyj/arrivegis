@@ -1,3 +1,53 @@
 body{
   padding-top: 70px;
+  background-color: whitegrey;
+
+  .navbar{
+    margin-bottom: 0px;
+  }
+
+  .navbar-inverse{
+    background-color: #e7e7e7;
+    border-color: #e7e7e7;
+  }
+
+  .row{
+    margin-right: 0px;
+
+    .col-md-3{
+      padding-right: 0px;
+
+      .nav-pills{
+        li{
+          a{
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+
+    .col-md-9{
+      padding-right: 0px;
+      padding-left: 0px;
+      
+      .contenedor{
+        background-color: #ffffff;
+        min-height: 560px;   
+      }
+    }
+
+    .dashboard-title{
+      background-color: #6090c0;
+      color: #ffffff;
+    }
+  }
+
+  .subnavbar{
+    background-color: #76a6d7;
+    min-height: 50px;
+  }
+}
+
+.sign_in{
+  background-color: #e7e7e7 !important;
 }

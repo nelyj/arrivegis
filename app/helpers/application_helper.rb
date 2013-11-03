@@ -9,4 +9,16 @@ module ApplicationHelper
       ""
     end  
   end
+
+  def body_class(current_user)
+    if current_user
+      "sign_in"
+    else
+      ""
+    end
+  end
+
+  def controller_action(controller)
+
+  end
 end

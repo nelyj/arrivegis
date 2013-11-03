@@ -1,16 +1,25 @@
 .navbar.navbar-fixed-top.navbar-inverse{role: "navigation"}
-	.container
-		.navbar-header
-			=link_to "Project", root_path, class: 'navbar-brand'
-		.collapse.navbar-collapse
-			-unless user_signed_in?
-				%ul.nav.navbar-nav
-					%li=link_to "Inicio", root_path
-					%li=link_to "Acerca de", "#"
-
-			%ul.nav.navbar-nav.pull-right
-				-if user_signed_in?
+	.row
+		-if user_signed_in?
+			.col-md-3
+				.navbar-header
+					=link_to "Project", root_path, class: 'navbar-brand'
+			.col-md-9
+				%ul.nav.navbar-nav.pull-right
 					%li=link_to "Cerrar sesion", logout_path
-				-else
-					%li=link_to "Registrate", registrar_path
-					%li=link_to "Identificate", login_path
+		-else
+			.col-md-12
+				.navbar-header
+					=link_to "Project", root_path, class: 'navbar-brand'
+				.collapse.navbar-collapse
+					-if user_signed_in?
+						%ul.nav.navbar-nav
+							%li=link_to "Inicio", root_path
+							%li=link_to "Acerca de", "#"
+
+					%ul.nav.navbar-nav.pull-right
+						-if user_signed_in?
+							%li=link_to "Cerrar sesion", logout_path
+						-else
+							%li=link_to "Registrate", registrar_path
+							%li=link_to "Identificate", login_path
