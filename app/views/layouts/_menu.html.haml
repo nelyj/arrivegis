@@ -3,9 +3,10 @@
 		.navbar-header
 			=link_to "Project", root_path, class: 'navbar-brand'
 		.collapse.navbar-collapse
-			%ul.nav.navbar-nav
-				%li=link_to "Inicio", root_path
-				%li=link_to "Acerca de", "#"
+			-unless user_signed_in?
+				%ul.nav.navbar-nav
+					%li=link_to "Inicio", root_path
+					%li=link_to "Acerca de", "#"
 
 			%ul.nav.navbar-nav.pull-right
 				-if user_signed_in?
