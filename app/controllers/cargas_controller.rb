@@ -1,0 +1,2 @@
+class CargasController < ApplicationController
+end
