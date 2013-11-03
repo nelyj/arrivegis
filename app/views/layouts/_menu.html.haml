@@ -1,11 +1,12 @@
 .navbar.navbar-fixed-top.navbar-inverse{role: "navigation"}
 	.container
 		.navbar-header
-			=link_to "Project", "#", class: 'navbar-brand'
+			=link_to "Project", root_path, class: 'navbar-brand'
 		.collapse.navbar-collapse
 			%ul.nav.navbar-nav
-				%li=link_to "Inicio", "#"
+				%li=link_to "Inicio", root_path
 				%li=link_to "Acerca de", "#"
 
 			%ul.nav.navbar-nav.pull-right
-				%li=link_to "Identificate", "#"	 
+				%li=link_to "Registrate", registrar_path
+				%li=link_to "Identificate", login_path
