@@ -6,12 +6,14 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    
     = render 'layouts/menu'
+    
     .container
       -flash.each do |type, message|
         %div{:class => "#{flash_class type}"}
           %button.close{"data-dismiss" => "alert"}
           = message
-           
+
       .row
         = yield

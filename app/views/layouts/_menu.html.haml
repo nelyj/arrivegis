@@ -8,5 +8,8 @@
 				%li=link_to "Acerca de", "#"
 
 			%ul.nav.navbar-nav.pull-right
-				%li=link_to "Registrate", registrar_path
-				%li=link_to "Identificate", login_path
+				-if user_signed_in?
+					%li=link_to "Cerrar sesion", logout_path
+				-else
+					%li=link_to "Registrate", registrar_path
+					%li=link_to "Identificate", login_path
