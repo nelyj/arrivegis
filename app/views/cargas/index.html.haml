@@ -1,1 +1,16 @@
-=controller_action(controller)
+.page-header
+  .row
+    .col-md-7
+      %h1 Rutas
+    .col-md-5
+      =link_to "Nueva Carga", new_ruta_path, remote: true, class: "btn btn-primary btn-lg pull-right"
+
+%table.table
+  %thead
+    %tr
+      %th Fecha 
+      %th Nombre de archivo
+  %tbody
+    %tr
+      %td
+      %td

@@ -1,6 +1,7 @@
 Arrivegis::Application.routes.draw do
-  resources :cargas
+  get "dashboard/index"
 
+  resources :rutas, :controller => "cargas"
 
   root :to => 'home#index'
   devise_for :users
@@ -11,6 +12,6 @@ Arrivegis::Application.routes.draw do
     get 'logout', to: 'devise/sessions#destroy', as: :logout
   end
 
-  match '/dashboard', to: 'cargas#index', as: :dashboard
+  match '/dashboard', to: 'dashboard#index', as: :dashboard
 
 end

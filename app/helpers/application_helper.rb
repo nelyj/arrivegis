@@ -23,7 +23,17 @@ module ApplicationHelper
 
     case action
     when "cargas#index"
+      "Rutas"
+    when "dashboard#index"
       "Dashboard"
+    else
+      ""
+    end
+  end
+
+  def is_active?(link_path)
+    if url_for(link_path).include? params[:controller] or current_page?(link_path)
+      "active"
     else
       ""
     end
