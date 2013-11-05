@@ -11,8 +11,9 @@
       %th Fecha 
       %th Nombre de archivo
   %tbody
-    %tr
-      %td
-      %td
+    -@cargas.each do |proceso|
+      %tr
+        %td=proceso.created_at
+        %td=proceso.name
 
 =render 'layouts/modal'

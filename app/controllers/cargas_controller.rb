@@ -1,9 +1,12 @@
 class CargasController < ApplicationController
+  before_filter :authenticate_user!
+
   def index
+    @cargas = current_user.cargas
   end
 
   def new
-    @carga = Carga.new
+    @carga = current_user.cargas.new
     respond_to do |format|
       format.js
       format.html
@@ -11,7 +14,7 @@ class CargasController < ApplicationController
   end
 
   def create
-    @carga = Carga.new(params[:carga])
+    @carga = current_user.cargas.new(params[:carga])
     respond_to do |format|
       if @carga.save
         format.html { redirect_to rutas_path, notice: 'Se ha cargado correctamente el archivo. Ahora puede crear el mapa de rutas' }

@@ -1,5 +1,5 @@
 class Carga < ActiveRecord::Base
-  after_create :setting_name
+  before_create :setting_name
 
   attr_accessible :name, :file_name
 
@@ -9,6 +9,6 @@ class Carga < ActiveRecord::Base
   mount_uploader :file_name, FileUploader
 
   def setting_name
-    self.name = Time.now.year.to_s + Time.now.month.to_s + Time.now.day.to_s + Time.now.min.to_s + Time.now.sec.to_s
+    self.name = Time.now.strftime("%Y%m%d%H%M%S").to_s + "_" + "#{File.basename(self.file_name.to_s, File.extname(self.file_name.to_s))}"
   end
 end
