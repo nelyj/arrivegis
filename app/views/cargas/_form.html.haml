@@ -1,0 +1,13 @@
+= simple_form_for @carga, url: rutas_path do |f|
+  .modal-content
+    .modal-header
+      %h1 Cargar archivo de rutas
+      %p
+        Necesitas cargar un archivo con las direcciones para generar una ruta de despacho
+    .error-messages
+
+    .modal-body
+      =f.input :name, label: false, placeholder: 'Nombre del archivo', input_html: {class: "form-control"}
+
+    .modal-footer
+      =f.button :submit, "Cargar archivo de rutas", class: 'btn-primary btn-lg btn-block'
