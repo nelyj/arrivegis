@@ -1,7 +1,7 @@
 .page-header
   .row
     .col-md-7
-      %h1 Rutas
+      %h1 Rutas Generadas
     .col-md-5
       =link_to "Nueva Carga", new_ruta_path, remote: true, class: "btn btn-primary btn-lg pull-right"
 
@@ -9,11 +9,29 @@
   %thead
     %tr
       %th Fecha 
+      %th Nombre de ruta
+      %th
+  %tbody
+    %tr
+      %td
+      %td
+      %td=link_to "Mostrar Mapa", "#", class: "btn btn-danger"
+
+%hr
+
+%h1 Rutas generadas
+
+%table.table
+  %thead
+    %tr
+      %th Fecha 
       %th Nombre de archivo
+      %th
   %tbody
     -@cargas.each do |proceso|
       %tr
         %td=proceso.created_at
         %td=proceso.name
-
+        %td=link_to "Generar ruta", "#", class: "btn btn-warning"
+        
 =render 'layouts/modal'
