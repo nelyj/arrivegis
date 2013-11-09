@@ -25,4 +25,8 @@ class CargasController < ApplicationController
       end
     end
   end
+
+  def show
+    @carga = current_user.cargas.find(params[:id])
+  end
 end

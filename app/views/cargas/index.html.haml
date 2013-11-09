@@ -32,6 +32,6 @@
       %tr
         %td=proceso.created_at
         %td=proceso.name
-        %td=link_to "Generar ruta", "#", class: "btn btn-warning"
-        
+        %td=link_to "Generar ruta", ruta_path(proceso), class: "btn btn-warning"
+
 =render 'layouts/modal'
