@@ -3,14 +3,14 @@
 		-if user_signed_in?
 			.col-md-3
 				.navbar-header
-					=link_to "Project", root_path, class: 'navbar-brand'
+					=link_to "Arrivegis", root_path, class: 'navbar-brand'
 			.col-md-9
 				%ul.nav.navbar-nav.pull-right
 					%li=link_to "Cerrar sesion", logout_path
 		-else
 			.col-md-12
 				.navbar-header
-					=link_to "Project", root_path, class: 'navbar-brand'
+					=link_to "Arrivegis", root_path, class: 'navbar-brand'
 				.collapse.navbar-collapse
 					-if user_signed_in?
 						%ul.nav.navbar-nav
