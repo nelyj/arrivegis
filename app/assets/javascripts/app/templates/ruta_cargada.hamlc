@@ -1,0 +1,4 @@
+%td=@created_at
+%td=@name
+%td
+  %button.btn.btn-success Crear Mapa

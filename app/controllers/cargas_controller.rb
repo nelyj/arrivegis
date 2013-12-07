@@ -3,6 +3,11 @@ class CargasController < ApplicationController
 
   def index
     @cargas = current_user.cargas
+  
+    respond_to do |format|
+      format.json { render json: @cargas }
+      format.html
+    end
   end
 
   def new
@@ -28,5 +33,16 @@ class CargasController < ApplicationController
 
   def show
     @carga = current_user.cargas.find(params[:id])
+    respond_to do |format|
+      format.json { render json: @carga }
+    end
+  end
+
+  def readExcel
+    @datos = [1,2,3,4,5,6]
+
+    respond_to do |format|
+      format.json { render json: @datos }
+    end
   end
 end

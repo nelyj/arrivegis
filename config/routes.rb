@@ -1,7 +1,14 @@
 Arrivegis::Application.routes.draw do
+  resources :personas
+
+
   get "dashboard/index"
 
-  resources :rutas, :controller => "cargas"
+  resources :rutas, :controller => "cargas" do
+    collection do 
+      get :readExcel
+    end    
+  end
 
   root :to => 'home#index'
   devise_for :users

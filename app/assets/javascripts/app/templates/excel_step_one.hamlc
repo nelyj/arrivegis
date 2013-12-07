@@ -1,0 +1,12 @@
+.page-header
+  .row
+    .col-md-7
+      %h1 Generación de rutas
+      %h4=@name
+    .col-md-5
+
+.jumbotron
+  %h2.centrar QUIERES CREAR EL MAPA AHORA ?
+  %br
+  %p.centrar
+    %button.btn.btn-success.btn-lg SI

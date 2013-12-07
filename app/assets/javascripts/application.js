@@ -11,6 +11,9 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require hamlcoffee
+//= require ./lib/underscore
+//= require ./lib/backbone
 //= require jquery_ujs
 //= require bootstrap
-//= require_tree .
+//= require ./app/arrivegis

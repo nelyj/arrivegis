@@ -1,0 +1,21 @@
+%h1 Listing personas
+
+%table
+  %tr
+    %th Nombre
+    %th Edad
+    %th
+    %th
+    %th
+
+  - @personas.each do |persona|
+    %tr
+      %td= persona.nombre
+      %td= persona.edad
+      %td= link_to 'Show', persona
+      %td= link_to 'Edit', edit_persona_path(persona)
+      %td= link_to 'Destroy', persona, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Persona', new_persona_path
