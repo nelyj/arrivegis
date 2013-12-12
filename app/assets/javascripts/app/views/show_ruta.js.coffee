@@ -16,10 +16,16 @@ class App.Views.ShowRuta extends Backbone.View
     this
 
   readExcel: ->
-    modelo = new App.Models.Ruta({id: @modelo.id })
-      
-    dato = modelo.sync('readExcel', @modelo, "")
+    directions = new App.Collections.Directions
+    opts = 
+      id: @modelo.id
 
+    console.log @modelo.id
+    #console.log opts
+    directions.sync('customs',directions,opts)
+    directions.fetch()
+
+    console.log directions
     $('h2').html(" Cargando ruta - Espere")
 
     $('.contenedor').fadeOut '10000', ->

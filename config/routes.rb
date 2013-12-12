@@ -1,6 +1,12 @@
 Arrivegis::Application.routes.draw do
-  resources :personas
 
+  resources :personas
+  resources :directions do
+    collection do 
+      get :custom
+      get :customs
+    end
+  end
 
   get "dashboard/index"
 

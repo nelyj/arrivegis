@@ -11,14 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131111233008) do
+ActiveRecord::Schema.define(:version => 20131210054452) do
 
   create_table "cargas", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.integer  "user_id"
     t.string   "file_name"
+    t.string   "columna_uno"
+    t.string   "columna_dos"
+    t.string   "columna_tres"
   end
 
   add_index "cargas", ["user_id"], :name => "index_cargas_on_user_id"
@@ -28,8 +31,12 @@ ActiveRecord::Schema.define(:version => 20131111233008) do
     t.float    "latitude"
     t.float    "longitude"
     t.integer  "carga_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "columna_uno"
+    t.string   "columna_dos"
+    t.string   "columna_tres"
+    t.string   "error"
   end
 
   add_index "directions", ["carga_id"], :name => "index_directions_on_carga_id"

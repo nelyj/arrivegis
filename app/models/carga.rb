@@ -1,7 +1,7 @@
 class Carga < ActiveRecord::Base
   before_create :setting_name
 
-  attr_accessible :name, :file_name
+  attr_accessible :name, :file_name, :columna_uno, :columna_dos, :columna_tres
 
   belongs_to :user
   has_many :directions
