@@ -37,6 +37,7 @@ class App.Views.ShowRuta extends Backbone.View
     
     $('.contenedor').fadeIn '10000', ->
       $('.jumbotron').html(JST['app/templates/confirm_mapa'](direcciones: directions))
-      $('h2').html("Confirmacion")
+      $('h2').html("Creación de mapa")
+      $('.col-md-7 h1').html('Confirmación de los datos')
       $('.jumbotron').after('<p><h2><b>NOTA: </b> Sólo se cargaron las <b>3</b> primerass direcciones para comprobar los datos. Al momento que que confirme los datos se cargarán todas las direcciones en el mapa.</h2></p>')
     #debugger;
