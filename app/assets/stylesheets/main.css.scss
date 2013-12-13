@@ -2,8 +2,21 @@ body{
   padding-top: 70px;
   background-color: whitegrey;
 
+  .estatico{
+    height: 100px;
+    background-color: white;
+  }
+
+  .subnavbar{
+    margin-top: 30px;
+  }
+
   .navbar{
     margin-bottom: 0px;
+  }
+
+  .navbar-brand{
+    padding: 0px;
   }
 
   .centrar{
