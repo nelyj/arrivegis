@@ -46,6 +46,9 @@ class App.Views.ShowRuta extends Backbone.View
     opts = 
       id: @id
 
+    direction.sync('custom', direction, opts)
+    direction.fetch(opts)
+
     $('.contenedor').fadeOut '10000', ->
       $('.col-md-7 h1').html('')
       $('.col-md-7 h4').html('')

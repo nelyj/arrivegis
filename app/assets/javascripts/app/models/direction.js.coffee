@@ -1,5 +1,5 @@
 class App.Models.Direction extends Backbone.Model
-  urlRoot: '/directions/'
+  urlRoot: '/directions'
 
   defaults:
     id: 1
@@ -14,10 +14,12 @@ class App.Models.Direction extends Backbone.Model
     
   sync: (method, model, opts) ->
     url: 'directions/custom'
-
+    console.log "sync method model"
+    
     options =
       url: 'directions/custom'
       type: 'GET'
+      data: $.param({ id: opts.id })
 
     Backbone.sync.call this, null, this, _.extend(options
     , opts)
