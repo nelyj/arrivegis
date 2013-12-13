@@ -1,0 +1,6 @@
+%h1
+  %b Carga de datos exitósa
+
+%hr
+
+%button.btn.btn-error.btn-lg Ver mapa

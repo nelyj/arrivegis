@@ -58,6 +58,17 @@ class App.Views.ShowRuta extends Backbone.View
       $('.nota').remove()
       $('h2').html("Creación de mapa")
       $('.jumbotron').html("<h2><b>Cargando datos para el mapa - Espere </b></h2>")
-      $('.col-md-7 h1').html('Creando Mapa')
+      
+
+    $('.contenedor').fadeOut '20000', ->
+      $('.col-md-7 h1').html('')
+      $('.col-md-7 h4').html('')
+      $('.jumbotron').html('') 
+
+      console.log direction
+     $('.contenedor').fadeIn '10000', ->
+      $('h2').html("Creación de mapa")
+      $('.jumbotron').html(JST['app/templates/mapa_cargado_exitoso'](model: direction))
+      $('.col-md-7 h1').html('Se han cargado exitósamente los datos')
       
     
