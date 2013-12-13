@@ -14,4 +14,4 @@
 
 %h4 ESTA SEGURO QUE QUIERE CARGAR ESTAS RUTAS ?
 
-%button.btn.btn-block.btn-success SI
+%button.btn.btn-block.btn-success.cargarDatos SI
