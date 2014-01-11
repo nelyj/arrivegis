@@ -9,9 +9,11 @@
   %body{:class => "#{body_class current_user}"}
     
     = render 'layouts/menu'
-    = render 'layouts/options'
+    
     
     -if user_signed_in?
+      = render 'layouts/options'
+      
       .row
         .col-md-3
           = render 'layouts/sidebar'

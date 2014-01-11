@@ -20,6 +20,10 @@
 							%li=link_to "Acerca de", "#"
 
 					%ul.nav.navbar-nav.pull-right
+						%li=link_to "Servicios","#"
+						%li=link_to "Formas de pago", "#"
+						%li=link_to "Atencion al cliente", "#"
+
 						-if user_signed_in?
 							%li=link_to "Cerrar sesion", logout_path
 						-else

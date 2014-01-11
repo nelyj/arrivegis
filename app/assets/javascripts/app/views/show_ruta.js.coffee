@@ -2,6 +2,7 @@ class App.Views.ShowRuta extends Backbone.View
   events:
     'click button.readExcel': 'readExcel'
     'click button.cargarDatos': 'cargarDatos'
+    'click button.verMapa': 'verMapa'
 
   clasName: 'information'
 
@@ -71,4 +72,17 @@ class App.Views.ShowRuta extends Backbone.View
       $('.jumbotron').html(JST['app/templates/mapa_cargado_exitoso'](model: direction))
       $('.col-md-7 h1').html('Se han cargado exitósamente los datos')
       
+  verMapa: ->
+    console.log("modelo id en verMApa: " + @modelo.id)
+    directions = new App.Collections.Directions
+    directions.fetch({id: @modelo.id})
+
+    console.log directions.length
+
+    googleMapsView = new App.Views.GoogleMapView({ collection: directions })
+
+    console.log googleMapsView
     
+
+
+
