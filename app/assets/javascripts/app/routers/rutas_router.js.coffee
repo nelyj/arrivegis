@@ -17,12 +17,11 @@ class App.Routers.RutasRouter extends Backbone.Router
     $('#rutas_generadas').after(view.render().el)
 
   show: (id) ->
-    console.log "carga show router"
+    
     view = new App.Views.ShowRuta({model: @rutasCollection.get(id)})
     $('.contenedor').html(view.render().el)
 
   show_map: (id) ->
-    console.log "Initialize show_map "
     
     opts =
       id: id
