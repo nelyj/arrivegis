@@ -22,8 +22,7 @@ class App.Views.ShowRuta extends Backbone.View
     directions = new App.Collections.Directions
     opts = 
       id: @id
-    #console.log @modelo.id
-    #console.log opts
+
     directions.sync('customs',directions,opts)
     directions.fetch(opts)
 
@@ -66,23 +65,13 @@ class App.Views.ShowRuta extends Backbone.View
       $('.col-md-7 h4').html('')
       $('.jumbotron').html('') 
 
-      console.log direction
      $('.contenedor').fadeIn '10000', ->
       $('h2').html("Creación de mapa")
       $('.jumbotron').html(JST['app/templates/mapa_cargado_exitoso'](model: direction))
       $('.col-md-7 h1').html('Se han cargado exitósamente los datos')
       
   verMapa: ->
-    console.log("modelo id en verMApa: " + @modelo.id)
-    directions = new App.Collections.Directions
-    directions.fetch({id: @modelo.id})
-
-    console.log directions.length
-
-    googleMapsView = new App.Views.GoogleMapView({ collection: directions })
-
-    console.log googleMapsView
-    
-
+    console.log "ver Mapa " + @modelo.id
+    Backbone.history.navigate('show_map/'+@modelo.id, true)
 
 

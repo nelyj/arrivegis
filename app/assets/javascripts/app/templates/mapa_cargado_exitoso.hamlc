@@ -1,6 +1,8 @@
-%h1
-  %b Carga de datos exitósa
+#map-canvas
 
-%hr
+  %h1
+    %b Carga de datos exitósa
 
-%button.btn.btn-error.btn-lg.verMapa Ver mapa
+  %hr
+
+  %button.btn.btn-error.btn-lg.verMapa Ver mapa

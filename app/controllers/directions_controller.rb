@@ -53,8 +53,6 @@ class DirectionsController < ApplicationController
       @responses.push(columna)
     end
 
-    #@responses = [{id: 100, address: 'los avellanos 268', latitude: 199, longitude: 199}]
-
     respond_with(@responses)
   end
 

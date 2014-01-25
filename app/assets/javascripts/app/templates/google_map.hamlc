@@ -1,1 +1,12 @@
-%h1 Hola
+#map-canvas
+
+%table.table-condensed
+  %thead
+    %tr
+      %th # 
+      %th Direcciones
+  %tbody
+    - for item in @data.models
+      %tr
+        %td=item.get('id')
+        %td=item.get('address')

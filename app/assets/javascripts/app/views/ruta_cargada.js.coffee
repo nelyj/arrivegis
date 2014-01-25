@@ -12,7 +12,4 @@ class App.Views.RutaCargada extends Backbone.View
 
   excelProcess: ->
     Backbone.history.navigate('show/'+@model.get('id'), true)
-    #excelView = new App.Views.ExcelStepOne({ model: @model })
-   
-    
     
