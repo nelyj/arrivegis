@@ -15,7 +15,6 @@ class App.Models.Direction extends Backbone.Model
     
   sync: (method, model, opts) ->
     url: 'directions/custom'
-    console.log "sync method model"
     
     options =
       url: 'directions/custom'

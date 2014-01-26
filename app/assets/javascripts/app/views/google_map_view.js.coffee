@@ -2,24 +2,50 @@ class App.Views.GoogleMapView extends Backbone.View
 	template: JST['app/templates/google_map']
 
 	initialize: ->
-		@collection.on('reset', @render, @)		
+		@collection.on('reset', @render, @)	
+		@start = new google.maps.LatLng(-32.466042574344975, -71.40262663597412)
+		@end = new google.maps.LatLng(41.850033, -87.6500523)	
 
-	
 	activate: ->
-		console.log "activate from google map view"
+		domElement = @$("#map-canvas")
+
 		mapOptions =
 			zoom: 8
-			center: new google.maps.LatLng(-34.397, 150.644)
-			mapTypeId: google.maps.MapTypeId.ROADMAP
+			center: @start
 
-		domElement = @$("#map-canvas")
 		@map = new google.maps.Map(domElement.get(0), mapOptions)
+		directionsDisplay = new google.maps.DirectionsRenderer( map : @map )
+		@directionsService = new google.maps.DirectionsService()
+		directionsDisplay.setMap(@map)
+
+		markerArray = []
+		waypoints = []
+
+		i = 0
+
+		while i < @collection.length
+			address = @collection.at(i).get('address')
+			if address isnt ""
+				waypoints.push
+					location: address
+					stopover: true
+
+				i++
+
+
+		request =
+			origin: "macul 250, santiago"
+			destination: "macul 250, santiago"
+			waypoints: waypoints
+			optimizeWaypoints: true
+			travelMode: google.maps.DirectionsTravelMode.DRIVING
+
+		@directionsService.route request, (response, status) ->
+			directionsDisplay.setDirections response if status is google.maps.DirectionsStatus.OK
+
 		this
 
-
 	render: ->
-		console.log "render from google map view"  
-		console.log @collection
 		@$el.html(@template({ data: @collection }))
 		@activate()
 		this

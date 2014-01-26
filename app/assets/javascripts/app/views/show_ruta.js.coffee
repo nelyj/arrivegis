@@ -10,7 +10,6 @@ class App.Views.ShowRuta extends Backbone.View
 
   initialize: ->
     @modelo = @model.toJSON()
-    console.log "inicializa render"
     @render()
 
   render: ->
@@ -71,7 +70,6 @@ class App.Views.ShowRuta extends Backbone.View
       $('.col-md-7 h1').html('Se han cargado exitósamente los datos')
       
   verMapa: ->
-    console.log "ver Mapa " + @modelo.id
     Backbone.history.navigate('show_map/'+@modelo.id, true)
 
 

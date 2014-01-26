@@ -5,10 +5,8 @@ class App.Views.ExcelStepOne extends Backbone.View
     vent.on('excelstepone:show', @showExcel, @)
 
   render: ->
-    console.log "render excel step one"
     @$el.html( @template( @model.toJSON() ) )
     @
 
   show: ->
-    console.log "show step one"
     Backbone.history.navigate('show/:id', 1)
