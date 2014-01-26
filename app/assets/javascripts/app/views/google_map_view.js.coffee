@@ -10,13 +10,14 @@ class App.Views.GoogleMapView extends Backbone.View
 		domElement = @$("#map-canvas")
 
 		mapOptions =
-			zoom: 8
+			zoom: 15
 			center: @start
 
 		@map = new google.maps.Map(domElement.get(0), mapOptions)
 		directionsDisplay = new google.maps.DirectionsRenderer( map : @map )
 		@directionsService = new google.maps.DirectionsService()
 		directionsDisplay.setMap(@map)
+		directionsDisplay.setPanel(document.getElementById('directions-panel'))
 
 		markerArray = []
 		waypoints = []
@@ -32,7 +33,6 @@ class App.Views.GoogleMapView extends Backbone.View
 
 				i++
 
-
 		request =
 			origin: "macul 250, santiago"
 			destination: "macul 250, santiago"
@@ -42,7 +42,6 @@ class App.Views.GoogleMapView extends Backbone.View
 
 		@directionsService.route request, (response, status) ->
 			directionsDisplay.setDirections response if status is google.maps.DirectionsStatus.OK
-
 		this
 
 	render: ->

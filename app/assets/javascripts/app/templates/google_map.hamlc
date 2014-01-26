@@ -1,12 +1,6 @@
-#map-canvas
+.row
+	.col-md-9
+		#map-canvas
 
-%table.table-condensed
-  %thead
-    %tr
-      %th # 
-      %th Direcciones
-  %tbody
-    - for item in @data.models
-      %tr
-        %td=item.get('id')
-        %td=item.get('address')
+	.col-md-3
+		#directions-panel

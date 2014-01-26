@@ -1,9 +1,15 @@
-#map-canvas
+.row
+	.col-md-10
+		#map-canvas
 
-  .mensaje
-    %h2.centrar
-      %b CARGA COMPLETADA EXITOSAMENTE
+			.mensaje
+				%h2.centrar
+				CARGA COMPLETADA EXITOSAMENTE
 
-    %hr
+				%hr
 
-    %button.btn.btn-error.btn-lg.verMapa.btn-block.centrar VER MAPA
+
+				%button.btn.btn-error.btn-lg.verMapa.btn-block.centrar VER MAPA
+
+	.col-md-2
+		#directions-panel
