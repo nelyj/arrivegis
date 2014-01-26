@@ -105,6 +105,19 @@ body{
     background-color: #76a6d7;
     min-height: 50px;
   }
+
+  @media print {
+    #map-canvas {
+      height: 500px;
+      margin: 0;
+    }
+
+    #directions-panel {
+      float: none;
+      width: auto;
+    }
+  }
+
 }
 
 .sign_in{
