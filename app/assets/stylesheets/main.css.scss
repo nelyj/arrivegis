@@ -1,6 +1,12 @@
-body{
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
+body{
+  font-family: 'Open Sans', sans-serif;
   
+  .readExcel{
+    font-size: 1.5em;
+  }
+
   .alert{
     padding: 10px;
     margin-top: 45px;
@@ -42,7 +48,7 @@ body{
   .row{
     margin-right: 0px;
 
-    .col-md-3{
+    .col-md-2{
       padding-right: 0px;
 
       .nav-stacked > li{
@@ -72,7 +78,7 @@ body{
       }
     }
 
-    .col-md-9{
+    .col-md-10{
       padding-right: 0px;
       padding-left: 0px;
       

@@ -23,9 +23,9 @@ module ApplicationHelper
 
     case action
     when "cargas#index"
-      "Rutas"
+      "RUTAS"
     when "dashboard#index"
-      "Dashboard"
+      "DASHBOARD"
     else
       ""
     end

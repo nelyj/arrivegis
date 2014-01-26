@@ -16,9 +16,9 @@
       = render 'layouts/options'
       
       .row
-        .col-md-3
+        .col-md-2
           = render 'layouts/sidebar'
-        .col-md-9
+        .col-md-10
           .contenedor
             -flash.each do |type, message|
               %div{:class => "#{flash_class type}"}

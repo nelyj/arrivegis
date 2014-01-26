@@ -9,4 +9,4 @@
   %h2.centrar QUIERES CREAR EL MAPA AHORA ?
   %br
   %p.centrar
-    %button.btn.btn-success.btn-lg.readExcel SI
+    %button.btn.btn-success.btn-lg.readExcel.btn-block SI
