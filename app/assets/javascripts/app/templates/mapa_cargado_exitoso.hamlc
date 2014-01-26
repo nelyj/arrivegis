@@ -1,8 +1,9 @@
 #map-canvas
 
-  %h1
-    %b Carga de datos exitósa
+  .mensaje
+    %h2.centrar
+      %b CARGA COMPLETADA EXITOSAMENTE
 
-  %hr
+    %hr
 
-  %button.btn.btn-error.btn-lg.verMapa Ver mapa
+    %button.btn.btn-error.btn-lg.verMapa.btn-block.centrar VER MAPA

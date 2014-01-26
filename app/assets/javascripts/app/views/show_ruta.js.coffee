@@ -67,8 +67,9 @@ class App.Views.ShowRuta extends Backbone.View
      $('.contenedor').fadeIn '10000', ->
       $('h2').html("Creación de mapa")
       $('.jumbotron').html(JST['app/templates/mapa_cargado_exitoso'](model: direction))
-      $('.col-md-7 h1').html('Se han cargado exitósamente los datos')
-      
+      $('.col-md-7 h1').remove()
+      $('.page-header').remove()
+            
   verMapa: ->
     Backbone.history.navigate('show_map/'+@modelo.id, true)
 
